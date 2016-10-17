@@ -12,6 +12,14 @@ class BaseNode {
 public:
 	BaseNode();
 	virtual ~BaseNode();
+	int getNodeID();
+	void setNodeID();
+	double getNodeCapability();
+	void setNodeCapability(double nCapability);
+
+protected:
+	int nodeID;
+	double capability;
 };
 
 #endif /* GRAPHS_BASENODE_H_ */

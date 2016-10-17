@@ -12,6 +12,7 @@ class BaseLink {
 public:
 	BaseLink();
 	virtual ~BaseLink();
+<<<<<<< HEAD
 
 	void setLinkFrom( int lFrom );
 	int getLinkFrom();
@@ -26,6 +27,8 @@ protected:
 	int from;
 	int to;
 	double weight;
+=======
+>>>>>>> 536deaa461219e1131939774ede991ed08bf6d63
 };
 
 #endif /* GRAPHS_BASELINK_H_ */

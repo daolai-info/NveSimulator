@@ -12,7 +12,6 @@ class BaseGraph {
 public:
 	BaseGraph();
 	virtual ~BaseGraph();
-<<<<<<< HEAD
 
 	void setNodesAmount(int nAmount);
 	int getNodesAmount();
@@ -33,8 +32,7 @@ protected:
 
 	vector<BaseNode *> bNodes;
 	vector<BaseLink *> bLinks;
-=======
->>>>>>> 536deaa461219e1131939774ede991ed08bf6d63
+
 };
 
 #endif /* GRAPHS_BASEGRAPH_H_ */

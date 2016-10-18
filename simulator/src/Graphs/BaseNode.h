@@ -20,6 +20,9 @@ public:
 
 protected:
 	int nodeID;
+	int degree;
+	int inDegree;
+	int outDegree;
 	double capability;
 };
 

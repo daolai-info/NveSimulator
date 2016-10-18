@@ -8,22 +8,37 @@
 #ifndef GRAPHS_BASEGRAPH_H_
 #define GRAPHS_BASEGRAPH_H_
 
+#include <vector>
+
+#include "BaseNode.h"
+#include "BaseLink.h"
+using namespace std;
+
 class BaseGraph {
 public:
 	BaseGraph();
 	virtual ~BaseGraph();
-
-	void setNodesAmount(int nAmount);
-	int getNodesAmount();
-
-	void setLinksAmount(int lAmount);
-	int getLinksAmount();
 
 	void addNodeIntoGraph(BaseNode * bNode);
 	void deleteNodeFromGraph(BaseNode * bNode);
 
 	void addLinkIntoGraph(BaseLink * bLink);
 	void deleteLinkFromGraph(BaseLink * bLink);
+
+	const vector<BaseLink*>& getLinks() const;
+	void setLinks(const vector<BaseLink*>& links);
+
+	const vector<BaseNode*>& getNodes() const;
+	void setNodes(const vector<BaseNode*>& nodes);
+
+	int getDirectedFlag() const;
+	void setDirectedFlag(int directedFlag);
+
+	int getLinksAmount() const;
+	void setLinksAmount(int linksAmount) ;
+
+	int getNodesAmount() const;
+	void setNodesAmount(int nodesAmount);
 
 protected:
 	int directedFlag;   // directed graph: 1  undirected graph: 0

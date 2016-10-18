@@ -13,15 +13,14 @@ public:
 	BaseLink();
 	virtual ~BaseLink();
 
+	int getFrom() const;
+	void setFrom(int from);
 
-	void setLinkFrom( int lFrom );
-	int getLinkFrom();
+	int getTo() const;
+	void setTo(int to);
 
-	void setLinkFrom( int lTo);
-	int getLinkTo();
-
-	void setLinkWeight( double lWeight);
-	double getLinkWeight();
+	double getWeight() const;
+	void setWeight(double weight);
 
 protected:
 	int from;

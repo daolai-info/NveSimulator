@@ -19,6 +19,7 @@ public:
 	BaseGraph();
 	virtual ~BaseGraph();
 
+
 	void addNodeIntoGraph(BaseNode * bNode);
 	void deleteNodeFromGraph(BaseNode * bNode);
 

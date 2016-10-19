@@ -9,11 +9,17 @@
 
 BaseGraph::BaseGraph() {
 	// TODO Auto-generated constructor stub
-
+	this->directedFlag = 0;
+	this->linksAmount = 0;
+	this->nodesAmount = 0;
 }
 
 BaseGraph::~BaseGraph() {
 	// TODO Auto-generated destructor stub
+	this->directedFlag = 0;
+	this->linksAmount = 0;
+	this->nodesAmount = 0;
+	clear();
 }
 
 const vector<BaseLink*>& BaseGraph::getLinks() const {
@@ -54,4 +60,21 @@ int BaseGraph::getNodesAmount() const {
 
 void BaseGraph::setNodesAmount(int nodesAmount) {
 	this->nodesAmount = nodesAmount;
+}
+
+void BaseGraph::clear() {
+	for (vector<BaseLink*>::iterator pos = this->bNodes.begin();
+			pos != this->bLinks.end(); ++pos) {
+		if (*pos != NULL) {
+			delete *pos;
+		}
+	}
+	for (vector<BaseNode*>::iterator pos = this->bNodes.begin();
+			pos != this->bLinks.end(); ++pos) {
+
+		if (*pos != NULL) {
+			delete *pos;
+		}
+	}
+
 }

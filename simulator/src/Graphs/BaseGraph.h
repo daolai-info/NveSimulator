@@ -8,6 +8,7 @@
 #ifndef GRAPHS_BASEGRAPH_H_
 #define GRAPHS_BASEGRAPH_H_
 
+#include <iostream>
 #include <vector>
 
 #include "BaseNode.h"
@@ -18,7 +19,6 @@ class BaseGraph {
 public:
 	BaseGraph();
 	virtual ~BaseGraph();
-
 
 	void addNodeIntoGraph(BaseNode * bNode);
 	void deleteNodeFromGraph(BaseNode * bNode);
@@ -40,6 +40,8 @@ public:
 
 	int getNodesAmount() const;
 	void setNodesAmount(int nodesAmount);
+
+	void clear();
 
 protected:
 	int directedFlag;   // directed graph: 1  undirected graph: 0

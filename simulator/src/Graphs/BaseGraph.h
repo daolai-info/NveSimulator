@@ -18,6 +18,7 @@ using namespace std;
 class BaseGraph {
 public:
 	BaseGraph();
+	BaseGraph(const string * fileName);
 	virtual ~BaseGraph();
 
 	void addNodeIntoGraph(BaseNode * bNode);
@@ -50,6 +51,9 @@ protected:
 
 	vector<BaseNode *> bNodes;
 	vector<BaseLink *> bLinks;
+
+private:
+	void constructGraphFromGraphFile(const string fileName);
 
 };
 

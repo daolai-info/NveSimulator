@@ -8,11 +8,23 @@
 #include "BaseGraph.h"
 
 BaseGraph::BaseGraph() {
-	// TODO Auto-generated constructor stub
+
+    clear();
 	this->directedFlag = 0;
 	this->linksAmount = 0;
 	this->nodesAmount = 0;
 }
+
+BaseGraph::BaseGraph(const string fileName) {
+
+    clear();
+	this->directedFlag = 0;
+	this->linksAmount = 0;
+	this->nodesAmount = 0;
+
+	constructGraphFromGraphFile(fileName);
+}
+
 
 BaseGraph::~BaseGraph() {
 	// TODO Auto-generated destructor stub
@@ -78,3 +90,5 @@ void BaseGraph::clear() {
 	}
 
 }
+
+void BaseGraph

@@ -1,13 +1,13 @@
 # A Simulator of Network Virtualization Enviroment
 
-Network virtualization is one of the most promising technologies for the future Internet [1], [2], [3].
+Network virtualization is one of the most promising technologies for the future Internet [1], [2].
 We contribute a simulator of network virtualization environment. 
 
 ### It includes:
 
    - generate online virtual network embedding requests.
 
-   - perform virtual network embedding, including virtual node embedding and virtual link embedding.  
+   - perform virtual network embedding, including virtual node embedding and virtual link embedding [3].  
 
    - generate online end-user requests on virtual network.
 

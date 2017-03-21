@@ -23,7 +23,7 @@ In our contribution, we realize three virtual link embedding approaches:
 
    -  1 : 2  (OuYou: 黄葉)
    
-        One virtual link mapped two static substrate data transport path
+        One virtual link mapped two static substrate data transport paths
         
    -  1 : 1 or 2 (KuroMame: 黒豆)
    

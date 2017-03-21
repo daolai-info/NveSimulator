@@ -39,9 +39,6 @@ public:
 
 	VirNwGraph* constructVirtualNetwork(const int timing = 0);
 
-	int EmbeddingVirtualNetwork(VirNwGraph* vNwGraph, const int timing = 0);
-	int InitiateEmbeddingVirtualNetworkEnvironment(const int timing = 0);
-
 	int getAmountVNs();
 	void setAmountVNs(int amountVNs);
 	SubNwGraph*& getSubNw();
@@ -55,19 +52,6 @@ public:
 	 * copy the mapping of virtual networks and  substrate network including resource allocation
 	 */
 	VirtualNetworkEmbedding* copyVirtualNetworkEmbeddingEnvironment();
-
-	/*
-	 * clear the mapping of virtual links  on a virtual network embedding environment
-	 * for reallocation of virtual link resource
-	 */
-	void clearVirtualLinksResourceMappingAndAllocations();
-
-	/*
-	 * reallocation virtual network resource based on virtual link splitting ratio
-	 */
-	void reallocationVirtualLinksResourceBySplittingRatio(
-			const string pathsType =
-					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
 
 	/*
 	 * embedding virtual network with virtual link split ratio
@@ -98,8 +82,6 @@ public:
 	 */
 	void releaseEndUserVideoRequestsForVirtualNetwork(const int timing);
 
-	void performVirtualNetworkEnvironment(const int timing,
-			map<string, EndUserRequest*> euRequests);
 
 	/*
 	 * splitFlag:  how to divided end user request datarate to each substrate transport path
@@ -109,11 +91,6 @@ public:
 	void performVirtualNetworkEnvironmentWithVirtualLinkSplittingRatio(
 			const int timing, map<string, EndUserRequest*> euRequests,
 			const string splitFlag);
-	/*
-	 * proposal for dynamic virtual link resource reallocation based on specified virtual link splitting ratio
-	 */
-	void performVirtualNetworkEnvironmentWithVirLinkDynamicReallocation(
-			const int timing, map<string, EndUserRequest*> euRequests);
 
 	/*
 	 * get a disjoint path based on original substrate transport path and bandwidth, length constraints

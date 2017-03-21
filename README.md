@@ -11,7 +11,7 @@ It includes:
 
    * simulate point-to-point video data transmission service on virtual network.
 
-  * output statistical network information about substrate network and virtual networks.
+   * output statistical network information about substrate network and virtual networks.
  
 
 In our contribution, we realize three virtual link embedding approaches:

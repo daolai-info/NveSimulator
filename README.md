@@ -14,16 +14,17 @@ It includes:
    - output statistical network information about substrate network and virtual networks.
  
 
+
 In our contribution, we realize three virtual link embedding approaches:
 
-   -  1 : 1  (KouYou: 紅葉)
+   -  1 : 1  (KouYou: 紅葉)
    
         One virtual link mapped one substrate data transport path
 
    -  1 : 2  (OuYou: 黄葉)
    
         One virtual link mapped two static substrate data transport path
-        
+        
    -  1 : 1 or 2 (KuroMame: 黒豆)
    
         One virtual link mapped one or two substrate data transport paths that can be reconfigure dynamically based on network status.

@@ -4,15 +4,15 @@ we contribute a simulator of network virtualization environment.
 
 It includes:
 
-  a).  generate online virtual network embedding requests.
+    a).  generate online virtual network embedding requests.
   
-  b).  perform virtual network embedding, including virtual node embedding and virtual link embedding.
+    b).  perform virtual network embedding, including virtual node embedding and virtual link embedding.
   
-  c).  generate online end-user request of virtual network.
+    c).  generate online end-user request of virtual network.
   
-  d).  simulate point-to-point video data transmission service of virtual network.
+    d).  simulate point-to-point video data transmission service of virtual network.
   
-  e).  output statistical network information about substrate network and virtual networks.
+    e).  output statistical network information about substrate network and virtual networks.
 
 
 In our contribution, we realize three virtual link embedding approaches:

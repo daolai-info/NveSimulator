@@ -2,16 +2,16 @@
 
 
 It includes:
-##
-* generate online virtual network embedding requests.
 
-* perform virtual network embedding, including virtual node embedding and virtual link embedding.  
+   * generate online virtual network embedding requests.
 
-* generate online end-user requests on virtual network.
+   * perform virtual network embedding, including virtual node embedding and virtual link embedding.  
 
-* simulate point-to-point video data transmission service on virtual network.
+   * generate online end-user requests on virtual network.
 
-* output statistical network information about substrate network and virtual networks.
+   * simulate point-to-point video data transmission service on virtual network.
+
+  * output statistical network information about substrate network and virtual networks.
  
 
 In our contribution, we realize three virtual link embedding approaches:

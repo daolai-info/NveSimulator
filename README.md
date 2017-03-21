@@ -31,6 +31,9 @@ We contribute a simulator of network virtualization environment.
    
         One virtual link mapped one or two substrate data transport paths that can be reconfigure dynamically based on network status.
 
+
+Update information at any time
+
 #
 [1] M. Chowdhury and R. Boutaba, “Network virtualization: State of the art and research challenges,” IEEE Commun. Mag., vol. 47, pp. 20–26, Jul. 2009. 
 

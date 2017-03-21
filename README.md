@@ -30,8 +30,8 @@ We contribute a simulator of network virtualization environment.
    * 1 : 1 or 2 (KuroMame: 黒豆)
    
         One virtual link mapped one or two substrate data transport paths that can be reconfigure dynamically based on network status.
-
-
+        
+#
 Update information at any time
 
 #

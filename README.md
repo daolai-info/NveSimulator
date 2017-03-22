@@ -1,7 +1,7 @@
 # A Simulator of Network Virtualization Enviroment
 
 Network virtualization is one of the most promising technologies for the future Internet [1], [2].
-We contribute a network simulator of network virtualization environment. 
+This work contributes a network simulator of network virtualization environment. 
 
 ### It includes:
 

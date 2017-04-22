@@ -1,7 +1,7 @@
 # A Simulator of Network Virtualization Enviroment
 
 Network virtualization is one of the most promising technologies for the future Internet [1], [2].
-We contribute a simulator of network virtualization environment. 
+This work contributes a network simulator of network virtualization environment. 
 
 ### It includes:
 
@@ -17,7 +17,7 @@ We contribute a simulator of network virtualization environment.
  
 
 
-### In our contribution, we realize three virtual link embedding approaches:
+### In this contribution, there are three virtual link embedding approaches realized:
 
    * 1 : 1  (KouYou: 紅葉)
    

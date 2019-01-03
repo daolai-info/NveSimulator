@@ -31,22 +31,28 @@ int main() {
 
 	string fileName = "./topologies/SubNW_50_5.brite";
 
-	VirtualNetworkEmbedding *vne = new VirtualNetworkEmbedding(fileName);
+	cout << " Create a network virtualization environment (NVE_KouYou) "
+			<< endl;
+
+	VirtualNetworkEmbedding *vne_kouyou = new VirtualNetworkEmbedding(fileName);
 
 	int timing = 0;
 
 	while (true) {
 
-		if (0 == vne->InitiateEmbeddingVirtualNetworkEnvironment(timing)) {
+		if (0
+				== vne_kouyou->InitiateEmbeddingVirtualNetworkEnvironment(
+						timing)) {
 
-			cout << " A Virtual Network Embedded Successfully :"
-					<< vne->getNws().size() << endl;
+			cout
+					<< " A virtual network is embedded into NVE_KouYou successfully. "
+					<< endl;
 
 		} else {
-			cout
-					<< " Initiate Virtual Network Environment Embedding Finished:  "
-					<< vne->getNws().size() << endl;
-			SubNwGraph::checkSubstrateLinksResource(vne->getSubNw());
+			cout << " The initiation of NVE_Ouyou is finished that embedded  "
+					<< vne_kouyou->getNws().size() << " virtual networks."
+					<< endl;
+			SubNwGraph::checkSubstrateLinksResource(vne_kouyou->getSubNw());
 			break;
 		}
 	}
@@ -64,62 +70,63 @@ int main() {
 				vNwRequests.end(), timing);
 		if (timing != 0 && iter != vNwRequests.end()) {
 
-			VirNwGraph* virNwSingle = vne->constructVirtualNetwork(timing);
+			VirNwGraph* virNwSingle = vne_kouyou->constructVirtualNetwork(
+					timing);
 
-			if (0 == vne->EmbeddingVirtualNetwork(virNwSingle, timing)) {
+			if (0 == vne_kouyou->EmbeddingVirtualNetwork(virNwSingle, timing)) {
 				cout << " Current time :" << timing << endl;
-				cout
-						<< " One Virtual Network Embedded With One Substrate transport Path successfully :"
-						<< vne->getNws().size() << endl;
+				cout << " A virtual network is embedded successfully." << endl;
 
 			} else {
-				cout << " Current time :" << timing << endl;
-				cout
-						<< " Embedding Finished ( With One Substrate transport Path):  "
-						<< vne->getNws().size() << endl;
 
 				VirNwGraph::ReleaseVirtualNetworkResource(virNwSingle);
 			}
 
 		}
-
+		cout << " Currently, there are virtual networks ("
+				<< vne_kouyou->getNws().size() << ") embedded into NVE_Ouyou."
+				<< endl;
 		// generate new end user request
 		int requestAmount =
 				RandomGenerator::getUserVideoRequestsAmountWithPoissonDistribution();
 
 		// place before perform end-user request function
-		vne->updateNveDataSwitchingEnergy(timing);
-		euRequests_default = vne->generateEndUserVideoRequestsForVirtualNetwork(
-				timing, requestAmount);
-		cout << " vne->performVirtualNetworkEnvironment " << endl;
-		vne->performVirtualNetworkEnvironment(timing, euRequests_default);
-		vne->releaseEndUserVideoRequestsForVirtualNetwork(timing);
+		vne_kouyou->updateNveDataSwitchingEnergy(timing);
+		euRequests_default =
+				vne_kouyou->generateEndUserVideoRequestsForVirtualNetwork(
+						timing, requestAmount);
+
+		vne_kouyou->performVirtualNetworkEnvironment(timing,
+				euRequests_default);
+		vne_kouyou->releaseEndUserVideoRequestsForVirtualNetwork(timing);
 		euRequests_default.clear();
 
-		SubNwGraph::checkSubstrateLinksResource(vne->getSubNw());
+		SubNwGraph::checkSubstrateLinksResource(vne_kouyou->getSubNw());
 
-		vne->updateAmountOfVnsRecords(timing);
-		vne->updateCurrentNumberOfVns(timing);
-		vne->updateCurrentRevenueVirLinkAndNodeRecords(timing);
+		vne_kouyou->updateAmountOfVnsRecords(timing);
+		vne_kouyou->updateCurrentNumberOfVns(timing);
+		vne_kouyou->updateCurrentRevenueVirLinkAndNodeRecords(timing);
 
 	}
 
 	string timestr = timer->getEndTiming();
 
-	cout << "  ****Embedding Virtual Network Environment's virtual networks :"
-			<< vne->getNws().size() << endl;
+	cout
+			<< "  ****The total available virtual networks in Network Virtualization Environment (NVE_KouYou) :"
+			<< vne_kouyou->getAmountVNs() << endl;
 
-	SubNwGraph::checkSubstrateLinksResource(vne->getSubNw());
-	SubNwGraph::checkSubstrateLinksResourceStatus(vne->getSubNw());
+	SubNwGraph::checkSubstrateLinksResource(vne_kouyou->getSubNw());
+	SubNwGraph::checkSubstrateLinksResourceStatus(vne_kouyou->getSubNw());
 
-	CommonFunctions::OutputRecordsIntoJsonFile("NVE_KouYou" + timestr,
+	CommonFunctions::OutputRecordsIntoJsonFile("NVE_KouYou_" + timestr,
 			"NVE_KouYou",
 			"NVE_KouYou: Each virtual link mapped into a static substrate data transport path on substrate network. ",
-			vne->getCongestionRecords(), vne->getAmountVnsRecords(),
-			vne->getCurrentNumberOfVns(),
-			vne->getCurrentRevenueVirLinkRecords(),
-			vne->getCurrentRevenueVirNodeRecords(),
-			vne->getDataSwitchingEnergy());
+			vne_kouyou->getCongestionRecords(),
+			vne_kouyou->getAmountVnsRecords(),
+			vne_kouyou->getCurrentNumberOfVns(),
+			vne_kouyou->getCurrentRevenueVirLinkRecords(),
+			vne_kouyou->getCurrentRevenueVirNodeRecords(),
+			vne_kouyou->getDataSwitchingEnergy());
 
 	timer->endTiming();
 	timer->elapsedTime();

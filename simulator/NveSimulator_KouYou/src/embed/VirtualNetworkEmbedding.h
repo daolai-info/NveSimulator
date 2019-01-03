@@ -56,31 +56,31 @@ public:
 	 */
 	VirtualNetworkEmbedding* copyVirtualNetworkEmbeddingEnvironment();
 
-//	/*
-//	 * clear the mapping of virtual links  on a virtual network embedding environment
-//	 * for reallocation of virtual link resource
-//	 */
-//	void clearVirtualLinksResourceMappingAndAllocations();
-//
-//	/*
-//	 * reallocation virtual network resource based on virtual link splitting ratio
-//	 */
-//	void reallocationVirtualLinksResourceBySplittingRatio(
-//			const string pathsType =
-//					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
+	/*
+	 * clear the mapping of virtual links  on a virtual network embedding environment
+	 * for reallocation of virtual link resource
+	 */
+	void clearVirtualLinksResourceMappingAndAllocations();
 
-//	/*
-//	 * embedding virtual network with virtual link split ratio
-//	 */
-//	int EmbeddingVirtualNetworkWithVirtualLinkSplittingRatio(
-//			VirNwGraph* vNwGraph, const int timing = 0,
-//			const string pathsType =
-//					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
-//
-//	int InitiateEmbeddingVirtualNetworkEnvironmentWithVirtualLinkSplittingRatio(
-//			const int timing = 0,
-//			const string pathsType =
-//					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
+	/*
+	 * reallocation virtual network resource based on virtual link splitting ratio
+	 */
+	void reallocationVirtualLinksResourceBySplittingRatio(
+			const string pathsType =
+					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
+
+	/*
+	 * embedding virtual network with virtual link split ratio
+	 */
+	int EmbeddingVirtualNetworkWithVirtualLinkSplittingRatio(
+			VirNwGraph* vNwGraph, const int timing = 0,
+			const string pathsType =
+					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
+
+	int InitiateEmbeddingVirtualNetworkEnvironmentWithVirtualLinkSplittingRatio(
+			const int timing = 0,
+			const string pathsType =
+					CommonConstants::DIFFERENT_SUBSTRATE_PATH_TYPE_OF_VIRTUAL_LINK);
 
 	const string& getSubNwGraphFile() const;
 	void setSubNwGraphFile(const string& subNwGraphFile);
@@ -101,19 +101,19 @@ public:
 	void performVirtualNetworkEnvironment(const int timing,
 			map<string, EndUserRequest*> euRequests);
 
-//	/*
-//	 * splitFlag:  how to divided end user request datarate to each substrate transport path
-//	 *        splitFlag = 1:1     =>  equal division for the data rate : 50%: 50%
-//	 *        splitFlag = 1:0     =>  no-equal division.  100%: 0%
-//	 */
-//	void performVirtualNetworkEnvironmentWithVirtualLinkSplittingRatio(
-//			const int timing, map<string, EndUserRequest*> euRequests,
-//			const string splitFlag);
-//	/*
-//	 * proposal for dynamic virtual link resource reallocation based on specified virtual link splitting ratio
-//	 */
-//	void performVirtualNetworkEnvironmentWithVirLinkDynamicReallocation(
-//			const int timing, map<string, EndUserRequest*> euRequests);
+	/*
+	 * splitFlag:  how to divided end user request datarate to each substrate transport path
+	 *        splitFlag = 1:1     =>  equal division for the data rate : 50%: 50%
+	 *        splitFlag = 1:0     =>  no-equal division.  100%: 0%
+	 */
+	void performVirtualNetworkEnvironmentWithVirtualLinkSplittingRatio(
+			const int timing, map<string, EndUserRequest*> euRequests,
+			const string splitFlag);
+	/*
+	 * proposal for dynamic virtual link resource reallocation based on specified virtual link splitting ratio
+	 */
+	void performVirtualNetworkEnvironmentWithVirLinkDynamicReallocation(
+			const int timing, map<string, EndUserRequest*> euRequests);
 
 	/*
 	 * get a disjoint path based on original substrate transport path and bandwidth, length constraints

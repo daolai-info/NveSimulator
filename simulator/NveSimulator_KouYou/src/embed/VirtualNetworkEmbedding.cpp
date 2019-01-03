@@ -802,12 +802,12 @@ int VirtualNetworkEmbedding::EmbeddingVirtualNetwork(VirNwGraph* vNwGraph,
 						+ " virtual networks have been embedding into substrate network.");
 
 		// configure duration time information
-//		vNwGraph->setVirNwStartTiming(timing);
-//		vNwGraph->setVirNwDurationTimeUnits(
-//				RandomGenerator::getVirtualNetworkDurationTimeWithUniformDistribution());
-//		vNwGraph->setVirNwEndTiming(
-//				vNwGraph->getVirNwStartTiming()
-//						+ vNwGraph->getVirNwDurationTimeUnits());
+		vNwGraph->setVirNwStartTiming(timing);
+		vNwGraph->setVirNwDurationTimeUnits(
+				RandomGenerator::getVirtualNetworkDurationTimeWithUniformDistribution());
+		vNwGraph->setVirNwEndTiming(
+				vNwGraph->getVirNwStartTiming()
+						+ vNwGraph->getVirNwDurationTimeUnits());
 
 		vNwGraph->setVirNwNo(
 				CommonFunctions::CoverIntegerToString(
